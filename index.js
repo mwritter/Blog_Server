@@ -99,7 +99,7 @@ app.put("/api/posts/:id", function(req, res) {
 });
 
 app.delete("/api/posts/:id", function(req, res) {
-  db.collection(POSTS_COLLECTION).deletOne(
+  db.collection(POSTS_COLLECTION).deleteOne(
     { _id: new ObjectID(req.params.id) },
     function(err, result) {
       if (err) {
